@@ -2,6 +2,7 @@ import create from "zustand";
 
 const useStore = create((set, get) => ({
   contacts: [],
+  contact: null,
 
   addContact: (data) => {
     fetch("http://localhost:5000/contact/add", {
@@ -19,6 +20,11 @@ const useStore = create((set, get) => ({
     fetch("http://localhost:5000/contact")
       .then((resp) => resp.json())
       .then((contacts) => set({ contacts: contacts }));
+  },
+  getContactByName: (name) => {
+    fetch(`http://localhost:5000/contact/${name}`)
+      .then((res) => res.json())
+      .then((contact) => set({ contact: contact }));
   },
 }));
 
