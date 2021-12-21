@@ -1,27 +1,16 @@
+import Contact from "../components/contact";
 import useStore from "../store";
+import "../styles/contacts.css"
 
 export default function Contacts() {
   const contacts = useStore((state) => state.contacts)
 
-  function deleteContact() {
-    
-
-  }
-
-
-    return (
-      <main>
-        <h2>Contacts</h2>
-        <ul>
+  return (
+      <main className="contacts-container">
+        <ul className="contacts-list">
           {contacts.map((contact) => (
-          <li key={contact.id}>
-            <div className="contact">
-              <p>{contact.name}</p>
-              <p>{contact.email}</p>
-              <p>{contact.phone}</p>
-              <p>{contact.address}</p>
-              <button onClick={deleteContact}>Delete</button>
-            </div>
+          <li className="contacts-list-item" key={contact.id}>
+              <Contact contact={contact} />
           </li>
           ))}
         </ul>

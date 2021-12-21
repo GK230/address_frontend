@@ -8,3 +8,30 @@ form {
     grid-gap: 1rem;
     padding-bottom: 3rem;
 }
+
+input, textarea {
+    font-size: 1em;
+    padding: 0.25em;
+    border-radius: 7px;
+}
+
+button {
+    width: fit-content;
+    border: red solid 4px;
+    border-radius: 15px;
+    color: red;
+    background-color: white;
+    padding: 0.5rem 1rem;
+    font-size: 1.5em;
+    justify-self: center;
+    font-weight: bolder;
+
+}
+
+button:hover {
+    color: black;
+    border: black solid 4px;
+    background-color: red;
+    transition: .25s;
+    font-weight: bolder;
+}

@@ -4,5 +4,39 @@
   background-size: cover;
   background-position: center;
   display: grid;
-  place-items: center;
+  grid-template-rows: 200px 100px auto;
+  height: 100%;
+  align-items: start;
+  justify-items: center;
 }
+
+h1 {
+  font-size: 4em;
+  align-self: center;
+  font-weight: bolder;
+}
+
+nav {
+}
+
+nav ul li {
+  display: inline;
+  list-style: none;
+  margin-right: 2rem;
+  font-size: 1.5em;
+  font-weight: bold;
+  border: grey solid 2px;
+  border-radius: 10px;
+  padding: 0.5rem;
+  background-color: white;
+}
+
+nav ul li:hover {
+  background-color:lightgrey;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: grey;
+}
+

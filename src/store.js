@@ -26,6 +26,11 @@ const useStore = create((set, get) => ({
       .then((res) => res.json())
       .then((contact) => set({ contact: contact }));
   },
+  deleteContact: (name) => {
+    fetch(`http://localhost:5000/contact/${name}`, { method: "DELETE" }).then(
+      (res) => res.json()
+    );
+  },
 }));
 
 export default useStore;

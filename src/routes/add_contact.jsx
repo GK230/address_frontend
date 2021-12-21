@@ -44,13 +44,12 @@ export default function AddContact() {
 
     return (
       <main>
-        <h2>Add Contact</h2>
         <form onSubmit={handleSubmit}>
             <input type="text" placeholder="Name" name="name" value={form.name} onChange={handleChange}/>
             <input type="text" placeholder="Email" name="email" value={form.email} onChange={handleChange}/>
             <input type="tel" placeholder="Phone" name="phone" value={form.phone} onChange={handleChange}/>
             <textarea name="address" placeholder="Address" value={form.address} onChange={handleChange}/>
-            <button type="submit">Add</button>
+            <button type="submit">Add Contact</button>
         </form>
       </main>
     );

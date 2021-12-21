@@ -1,0 +1,15 @@
+main.contacts-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    
+}
+
+ul.contacts-list {
+
+}
+
+ul.contacts-list li.contacts-list-item {
+    margin-bottom: 1rem;
+    list-style: none;
+}

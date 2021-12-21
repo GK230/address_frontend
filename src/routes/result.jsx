@@ -1,15 +1,18 @@
 import useStore from "../store";
-import { useEffect } from "react";
-import { useState } from "react";
+import Contact from "../components/contact";
 
 
 export default function Result() {
     const contact = useStore((state) => state.contact)
 
-    console.log(contact)
+    if (!contact) {
+        return <h2>Loading...</h2>
+    }
 
-    return(<main>
-        
-        <p>{contact.name}</p>
-        </main>)
+    return(
+        <section>
+            <div>
+                <Contact contact={contact[0]} />
+            </div>
+        </section>)
 }
