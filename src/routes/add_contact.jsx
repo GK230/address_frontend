@@ -39,7 +39,7 @@ export default function AddContact() {
 
       addContact(newContact)
       targetEvent.reset();
-  }
+    }
       
 
     return (

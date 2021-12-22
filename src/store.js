@@ -3,6 +3,10 @@ import create from "zustand";
 const useStore = create((set, get) => ({
   contacts: [],
   contact: null,
+  removeContact: (name) =>
+    get().contacts.filter((contact) => {
+      return contact.name !== name;
+    }),
 
   addContact: (data) => {
     fetch("http://localhost:5000/contact/add", {

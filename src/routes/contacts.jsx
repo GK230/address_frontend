@@ -1,9 +1,16 @@
+import { useEffect } from "react";
 import Contact from "../components/contact";
 import useStore from "../store";
 import "../styles/contacts.css"
 
 export default function Contacts() {
   const contacts = useStore((state) => state.contacts)
+  const getAllContacts = useStore((state) => state.getAllContacts)
+
+
+  useEffect(() => {
+    getAllContacts();
+  }, []);
 
   return (
       <main className="contacts-container">

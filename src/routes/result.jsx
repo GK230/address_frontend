@@ -3,16 +3,20 @@ import Contact from "../components/contact";
 
 
 export default function Result() {
-    const contact = useStore((state) => state.contact)
+    let contact = useStore((state) => state.contact)
+    // contact = contact[0]
 
     if (!contact) {
         return <h2>Loading...</h2>
     }
 
+    contact = contact[0]
+    console.log(contact)
+
     return(
         <section>
             <div>
-                <Contact contact={contact[0]} />
+                <Contact contact={contact} />
             </div>
         </section>)
 }

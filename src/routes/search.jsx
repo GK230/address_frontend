@@ -1,4 +1,5 @@
 import useStore from "../store";
+import Contact from "../components/contact";
 import { useState } from "react";
 
 
@@ -27,12 +28,7 @@ export default function Search() {
 
             {filtered.map((contact) => (
                 <li key={contact.id}>
-                    <div className="contact">
-                        <p>{contact.name}</p>
-                        <p>{contact.email}</p>
-                        <p>{contact.phone}</p>
-                        <p>{contact.address}</p>
-                    </div>
+                    <Contact contact={contact} />
                 </li>
             ))}
             </ul>

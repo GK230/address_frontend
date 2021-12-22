@@ -5,6 +5,8 @@ div.contact {
     border-radius: 5px;
     flex-basis: 100%;
     margin-bottom: 2rem;
+    height: 15rem;
+    position: relative;
 
 }
 
@@ -29,6 +31,10 @@ button.delete {
     color: white;
     border: white solid 2px;
     border-radius: 15px;
+    position: absolute;
+    bottom: 20px;
+    left: 2rem;
+    font-weight: bolder;
 }
 
 button.delete:hover {
